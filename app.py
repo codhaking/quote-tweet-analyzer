@@ -1,4 +1,5 @@
 import streamlit as st
+import openai
 import subprocess
 import json
 import pandas as pd
@@ -7,6 +8,10 @@ from nltk.corpus import stopwords
 from bertopic import BERTopic
 from sklearn.feature_extraction.text import CountVectorizer
 import plotly.express as px
+
+# Securely load your API key (place this BEFORE calling OpenAI)
+openai.api_key = st.secrets["openai_api_key"]
+
 
 # Text preprocessing
 def clean_text(text):
