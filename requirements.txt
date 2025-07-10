@@ -6,3 +6,4 @@ bertopic
 scikit-learn
 sentence-transformers
 plotly
+openai
